@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore PlatformService.csproj
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build PlatformService.csproj --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test PlatformService.csproj --no-build --verbosity normal
